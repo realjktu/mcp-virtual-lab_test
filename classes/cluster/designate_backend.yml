@@ -1,0 +1,11 @@
+classes:
+- system.bind.server.single
+- system.designate.server.backend.bind
+parameters:
+  _param:
+    designate_bind9_rndc_key: 4pc+X4PDqb2q+5o72dISm72LM1Ds9X2EYZjqg+nmsS7FhdTwzFFY8l/iEDmHxnyjkA33EQC8H+z0fLLBunoitw==
+    designate_pool_target_type: bind9
+    designate_pool_target_options:
+      rndc_host: ${_param:single_address}
+      rndc_port: 953
+      rndc_key_file: /etc/designate/rndc.key
